@@ -1,0 +1,14 @@
+$mobile: 468px;
+
+.title-wrapper{
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+  margin: 2rem 33rem -1rem 0;
+  color: rgb(65, 62, 62);
+
+  @media screen and (max-width: $mobile) {
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+  }
+}

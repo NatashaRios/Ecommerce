@@ -1,0 +1,10 @@
+$mobile: 480px; 
+
+.wrapper{
+  display: flex;
+
+  @media screen and (max-width: $mobile) {
+    flex-direction: column-reverse;
+    margin-left: 1.5rem;
+  }
+}

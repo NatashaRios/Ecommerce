@@ -1,0 +1,123 @@
+$ipad: 768px;
+$mobile: 468px;
+
+.form-title{
+  font-size: 1.2em;
+  margin: 1rem 0 1rem 0;
+  font-weight: 700;
+  color: rgb(94, 91, 91);
+}
+
+.form-subtitle{
+  margin: 0.5rem 0 -0.5rem 0.3rem;
+  font-size: 1em;
+  color: rgb(117, 117, 117);
+}
+
+.form-input{
+  border-radius: 10px;
+  border: 2px solid rgb(196, 194, 194);
+  width: 100%;
+  height: 2.2rem;
+  padding-left: 2rem;
+}
+
+.div-position{
+  position: relative;
+  .form-icono{
+    position: relative;
+    top: 1.7rem;
+    left: 0.8rem;
+    color: rgb(148, 148, 148);
+    font-size: 0.8em;
+  }
+}
+
+
+
+.form-wrapper{
+  width: 20rem;
+  margin: 2rem 5rem 5rem 20rem;
+
+  @media screen and (max-width: $ipad){
+    margin-left: 2rem;
+  }
+
+  @media screen and (max-width: $mobile) {
+    margin-left: -1rem;
+  }
+  
+  .form-contact{
+    .contact-information{}
+    .icono-email{
+      
+    }
+    .form-email {}
+    .input-email{}
+    .form-phone{}
+    .input-phone{}
+  }//form-contact
+  .form-shipping{
+    .shipping-address{}
+    .form-name{}
+    .input-name{}
+    .form-address{}
+    .input-address{}
+    .form-city{}
+    .input-city{}
+  }//form-shipping
+  .country-postal{
+    display: flex;
+    margin-top: 0.5rem;
+    .country{
+      width: 50%;
+      margin-right: 0.5rem;
+      
+      .form-country{
+        margin-bottom: -0.5rem;
+      }
+      .select-country{
+        height: 2.5rem;
+        width: 100%;
+        border-radius: 10px;
+        border: 2px solid rgb(196, 194, 194);
+        padding-left: 1.5rem;
+        color: grey;
+      }
+    }
+    .postal{
+      width: 50%;
+      margin-left: 0.5rem;
+      
+      .form-postal{
+        margin-bottom: -0.5rem;
+      }
+      .input-postal{
+        height: 2.3rem;
+        width: 100%;
+        border-radius: 10px;
+        border: 2px solid rgb(196, 194, 194);
+        padding-left: 2rem;
+      }
+    }
+  }//country-postal
+  .save-input{
+    margin-top: 1rem;
+  }
+  .save-label{
+    margin-left: 0.5rem;
+    color: grey;
+  }
+  .button-form{
+    float: right;
+    margin-top: 1rem;
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: 7px;
+    background-color: rgb(233, 119, 77);
+    border: 0;
+    color: white;
+    font-weight: 700;
+  }
+} //form-wrapper
+

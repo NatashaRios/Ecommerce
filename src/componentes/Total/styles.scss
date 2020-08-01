@@ -1,0 +1,33 @@
+
+.total-shipping{
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  border-top: 2px solid rgb(194, 190, 190);
+  padding-top: 0.6rem;
+
+ 
+  .total-shipping-title{
+    font-weight: 700;
+    font-size: 0.8em;
+  }
+  .total-result-shipping{
+    font-weight: 700;
+    font-size: 0.8em;
+  }
+}
+.total-total{
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  border-top: 2px solid rgb(194, 190, 190);
+  padding-top: 0.6rem;
+  .total-total-title{
+    font-weight: 700;
+    font-size: 0.8em;
+  }
+  .total-result-total{
+    font-weight: 700;
+    font-size: 0.8em;
+  }
+}
