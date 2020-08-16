@@ -15,10 +15,12 @@ class Carrito extends React.Component {
 
   componentDidMount() {
     let totalPrice = 0;
+    
     const stringifiedProducts = localStorage.getItem("cart");
     
     if(stringifiedProducts) {
       const products = JSON.parse(stringifiedProducts);
+      console.log(products)
       products.map((product) => {
         totalPrice = totalPrice + product.price
       })

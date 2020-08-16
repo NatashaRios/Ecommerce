@@ -27,12 +27,12 @@ class Producto extends React.Component{
     
   }
   render() {
-    const { img, title, price } = this.props.data;
+    const { thumbnail, title, price } = this.props.data;
     const { qty } = this.state;
     return(
       <div className="product-wrapper">
        <div className="product-img-div">
-         <img className="product-img" src={img} />
+         <img className="product-img" src={thumbnail} />
        </div>
        <div className="product-datos">
         <h3 className="product-title">{title}</h3>

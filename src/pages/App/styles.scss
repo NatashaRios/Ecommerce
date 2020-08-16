@@ -4,27 +4,48 @@ body{
   background-color: rgb(243, 213, 219);
 }
 
-.title-carrousel{
+.search{
+  text-align: center;
+  padding-top: 2rem;
+  
+  .input{
+    border-radius: 5px;
+    border-color: rgb(243, 213, 219);
+    margin-right: 1rem;
+    background-color: rgb(250, 234, 237);
+    width: 14rem;
+    height: 1.5rem;
+  }
+  .button{
+    border-radius: 5px;
+    border-color: rgb(243, 213, 219);
+    background-color: rgb(250, 234, 237);
+    width: 5rem;
+    height: 2rem;
+  }
+}
+
+.title-carousel{
   margin: 5rem;
   font-size: 1.5em;
   font-weight: 700;
   color: grey;
   }
-.wrapper-carrousel{
+.wrapper-carousel{
 
   @media screen and (max-width: $mobile){
     display: flex;
   }
     
-  .content-carrousel{
-    margin: 3rem 1rem 0 1rem;
+  .content-carousel{
+    margin: 0 1rem 0 1rem;
 
     @media screen and (max-width: $mobile){
       margin-top: 5rem;
     }
-   .products-carrousel{
-     width: 18rem;
-     height: 11rem;
+   .products-carousel{
+     width: 10rem;
+     height: 10rem;
      object-fit: cover
    }
   }

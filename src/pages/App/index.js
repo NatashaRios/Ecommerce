@@ -1,7 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import products from '../../data/products.json';
-import { Link } from 'react-router-dom';
+import axios from 'axios';
 import './styles.scss';
 
 
@@ -17,6 +16,26 @@ class App extends React.Component{
       infinit: true,
       arrows: true
     }
+
+    this.state={
+      inputValue: "",
+      mercadolibre: []
+    }
+  }
+
+  handleChange(e){
+    this.setState({
+      inputValue: e.target.value
+    })
+  }
+
+  async handleClickSearch(){
+    const searchValue = this.state.inputValue;
+    const getMl = await axios (`https://api.mercadolibre.com/sites/MLA/search?q=${searchValue}e&limit=5`);
+
+    this.setState({
+      mercadolibre: getMl.data.results
+    })
   }
 
   handleClick(product) {
@@ -33,19 +52,24 @@ class App extends React.Component{
       localStorage.setItem("cart", newCart);
     }
     this.props.history.push("/checkout");
-    console.log(product);
   }
   render() {
+    const { mercadolibre } = this.state;
+   
     return(
       <React.Fragment>
-        <h1 className="title-carrousel">Productos</h1>
-        <div className="wrapper-carrousel">
+        <div className='search'>
+          <input className='input' onChange={(e) => this.handleChange(e)} type="text" />
+          <button className='button' onClick={() => this.handleClickSearch()} >Buscar</button>
+        </div>
+        <h1 className="title-carousel">Productos</h1>
+        <div className="wrapper-carousel">
         <Slider {...this.settings}>
-          {products.map((product,key) => {
+          {mercadolibre.map((product,key) => {
             return(
-              <div key={key} onClick={() => this.handleClick(product)} className="content-carrousel">
+              <div key={key} onClick={() => this.handleClick(product)} className="content-carousel">
                 
-                <img className="products-carrousel" src={product.img} />
+                <img className="products-carousel" src={product.thumbnail} />
               
               </div>
             )
@@ -60,6 +84,3 @@ class App extends React.Component{
 
 export default App;
 
-/* hacer el localstorage
-hacer un handleclick que me redicciona aca: history.push("/checkout")
-aca se guarda this.props.history.push("/checkout) */
